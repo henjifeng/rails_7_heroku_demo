@@ -22,3 +22,12 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+new postrgres docker
+```
+docker network create app
+docker run --name postgres -e POSTGRES_PASSWORD=123123 -e POSTGRES_USER=postgres --network app -p 5432:5432 -v /home/jack/postgres_db:/var/lib/postgresql/data -d postgres
+```
+
+
+
