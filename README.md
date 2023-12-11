@@ -23,7 +23,8 @@ Things you may want to cover:
 
 * ...
 
-
+[DHH Rails 7 DEMO with HERO KU](https://www.youtube.com/watch?v=mpWFrUwAN88)
+[Deploying Ruby on Rails to Heroku](https://www.youtube.com/watch?v=ONsUBM10ypg)
 
 heroku config:set TIMES=10
 heroku run db
