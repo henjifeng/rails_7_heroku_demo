@@ -81,8 +81,10 @@ test:
 #
 production:
   <<: *default
-  hostname: 127.0.0.1
-  port: 5432
-  database: rails_7_heroku_demo_production
-  username: rails_7_heroku_demo
-  password: <%= ENV["RAILS_7_HEROKU_DEMO_DATABASE_PASSWORD"] %>
+  # database: rails_7_heroku_demo_production
+  # username: rails_7_heroku_demo
+  # password: <%#= ENV["RAILS_7_HEROKU_DEMO_DATABASE_PASSWORD"] %>
+  url: <%= ENV["DATABASE_URL"] %>
+
+
+
