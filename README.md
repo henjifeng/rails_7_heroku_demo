@@ -23,19 +23,51 @@ Things you may want to cover:
 
 * ...
 
-[DHH Rails 7 DEMO with HERO KU](https://www.youtube.com/watch?v=mpWFrUwAN88)
-[Deploying Ruby on Rails to Heroku](https://www.youtube.com/watch?v=ONsUBM10ypg)
+> [DHH Rails 7 DEMO with HERO KU](https://www.youtube.com/watch?v=mpWFrUwAN88)
 
-heroku config:set TIMES=10
-heroku run db
-[参考](https://devcenter.heroku.com/articles/getting-started-with-ruby#use-a-database)
-heroku addons:docs heroku-postgresql
+> [Deploying Ruby on Rails to Heroku](https://www.youtube.com/watch?v=ONsUBM10ypg)
+
+> [ruby heroku官网参考](https://devcenter.heroku.com/articles/getting-started-with-ruby#use-a-database)
+
+> [Rails heroku 官网参考教程](https://devcenter.heroku.com/articles/getting-started-with-rails7#local-setup)
+
 ```
 #增加插件数据库
 heroku addons:create heroku-postgresql:mini
 
-#配置DATABASE环境变量
+# heroku addons:docs heroku-postgresql
+
+#配置DATABASE 等环境变量
 heroku config:set TIMES=10
+```
+
+
+删除heroku 项目和插件
+```
+heroku addons:destroy heroku-postgresql
+ ▸    WARNING: Destructive Action
+ ▸    This command will affect the app polar-eyrie-78321
+ ▸    To proceed, type polar-eyrie-78321 or re-run this command with
+ ▸    --confirm polar-eyrie-78321
+
+> --confirm polar-eyrie-78321
+ ▸    Confirmation did not match polar-eyrie-78321. Aborted.
+jack@jack-virtual-machine:~/Desktop/rails_7_heroku_demo$ heroku addons:destroy heroku-postgresql  --confirm polar-eyrie-78321
+Destroying postgresql-pointy-25045 on ⬢ polar-eyrie-78321... done
+jack@jack-virtual-machine:~/Desktop/rails_7_heroku_demo$
+
+
+heroku apps:destroy
+
+ heroku apps:destroy
+ ▸    WARNING: This will delete ⬢ polar-eyrie-78321 including all add-ons.
+ ▸    To proceed, type polar-eyrie-78321 or re-run this command with
+ ▸    --confirm polar-eyrie-78321
+
+>
+>  polar-eyrie-78321
+Destroying ⬢ polar-eyrie-78321 (including all add-ons)... done
+
 ```
 
 
@@ -93,6 +125,12 @@ bundle install
 ```
 
 **修改数据库配置文件**
+
+
+
+
+
+
 
 
 
