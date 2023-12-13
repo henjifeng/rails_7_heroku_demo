@@ -90,7 +90,14 @@ rails db:system:change --to=postgresql
 new postrgres docker
 ```
 docker network create app
-docker run --name postgres -e POSTGRES_PASSWORD=123123 -e POSTGRES_USER=postgres --network app -p 5432:5432 -v /home/jack/postgres_db:/var/lib/postgresql/data -d postg
+docker run --name postgres -e POSTGRES_PASSWORD=123123 -e POSTGRES_USER=postgres --network app -p 5432:5432 -v /home/jack/postgres_db:/var/lib/postgresql/data -d postgres
+
+# other
+docker run --name postgres -e POSTGRES_PASSWORD=123123 -e POSTGRES_USER=postgres -p 5432:5432 -v /home/jack/postgres_db:/var/lib/postgresql/data -d postgres
+docker run --rm --network app postgres psql -h postgres -U postgres
+
+# rails development db url
+url: postgres://postgres:123123@127.0.0.1:5432/rails_7_heroku_demo_development
 ```
 
 version
